@@ -1,0 +1,165 @@
+package hr.java.vjezbe.glavna;
+
+import java.math.BigDecimal;
+import java.util.Scanner;
+import java.util.concurrent.SynchronousQueue;
+
+import hr.java.vjezbe.entitet.Drzava;
+import hr.java.vjezbe.entitet.GeografskaTocka;
+import hr.java.vjezbe.entitet.MjernaPostaja;
+import hr.java.vjezbe.entitet.Mjesto;
+import hr.java.vjezbe.entitet.Operater;
+import hr.java.vjezbe.entitet.Zupanija;
+
+public class Glavna {
+
+	private static final int BROJ_MJERNIH_POSTAJA = 2;
+
+	public static void main(String[] args) {
+
+		Scanner unos = new Scanner(System.in);
+
+		MjernaPostaja[] arrayMjernaPostaja = new MjernaPostaja[BROJ_MJERNIH_POSTAJA];
+		Operater[] arrayOperater = new Operater[BROJ_MJERNIH_POSTAJA];
+
+		for (int i = 0; i < BROJ_MJERNIH_POSTAJA; i++) {
+
+			// Drzava drzava = unesiDrzavu(unos, i);
+			//
+			// Zupanija zupanija = unesiZupaniju(unos, i, drzava);
+			//
+			// Mjesto mjesto = unesiMjesto(unos, i, zupanija);
+			//
+			// GeografskaTocka geografskaTocka = unesiGeografskuTocku(unos, i);
+			//
+			// MjernaPostaja mjernaPostaja = unesiMjernuPostaju(unos, i, mjesto,
+			// geografskaTocka);
+
+			provjeraOperatera(arrayOperater);
+
+			Operater operater = unesiOperatera(unos, i);
+
+			// arrayMjernaPostaja[i] = mjernaPostaja;
+
+			arrayOperater[i] = operater;
+
+		}
+		ispisiPodatke(arrayMjernaPostaja);
+		ispisiPodatkeOperatera(arrayOperater);
+
+		unos.close();
+	}
+
+	private static void ispisiPodatke(MjernaPostaja[] mjernaPostaja) {
+
+		for (int j = 0; j < BROJ_MJERNIH_POSTAJA; j++) {
+			System.out.println("******************************************");
+			System.out.printf("PODACI MJERNE POSTAJE %d:%n", j + 1);
+			System.out.printf("Naziv mjerne postaje: %s. %n", mjernaPostaja[j].getNaziv());
+			System.out.printf(
+					"Postaja se nalazi u mjestu: %s, zupaniji: %s, drzavi: %s. na nadmorskoj visini od: %.2f m%n",
+					mjernaPostaja[j].getMjesto().getNaziv(), mjernaPostaja[j].getMjesto().getZupanija().getNaziv(),
+					mjernaPostaja[j].getMjesto().getZupanija().getDrzava().getNaziv(),
+					mjernaPostaja[j].getNadmorskaVisina());
+
+			System.out.printf("Kooridnate postaje su: %nX:%f %nY:%f%n", mjernaPostaja[j].getGeografskaTocka().getX(),
+					mjernaPostaja[j].getGeografskaTocka().getY());
+		}
+	}
+
+	private static void ispisiPodatkeOperatera(Operater[] operater) {
+		for (int i = 0; i < BROJ_MJERNIH_POSTAJA; i++) {
+			System.out.printf("OIB operatera: %s %nime operatera: %s %nprezime operatera: %s", operater[i].getOIB(),
+					operater[i].getIme(), operater[i].getPrezime());
+		}
+	}
+
+	private static MjernaPostaja unesiMjernuPostaju(Scanner skener, Integer redniBroj, Mjesto mjesto,
+			GeografskaTocka geografskaTocka) {
+
+		System.out.printf("Unesite naziv %d. mjerne postaje: ", redniBroj + 1);
+		String nazivMjernePostaje = skener.nextLine();
+
+		System.out.printf("Unesite nadmorsku visinu %d. mjerne postaje: ", redniBroj + 1);
+		BigDecimal nadmorskaVisina = skener.nextBigDecimal();
+
+		skener.nextLine();
+
+		return new MjernaPostaja(nazivMjernePostaje, nadmorskaVisina, mjesto, geografskaTocka);
+	}
+
+	private static Drzava unesiDrzavu(Scanner skener, Integer redniBroj) {
+
+		System.out.printf("Unesite naziv drzave %d. mjerne postaje: ", redniBroj + 1);
+		String nazivDrzave = skener.nextLine();
+
+		System.out.printf("Unesite povrsinu drzave %d. mjerne postaje: ", redniBroj + 1);
+		BigDecimal povrsinaDrzave = skener.nextBigDecimal();
+
+		skener.nextLine();
+
+		return new Drzava(nazivDrzave, povrsinaDrzave);
+	}
+
+	private static Zupanija unesiZupaniju(Scanner skener, Integer redniBroj, Drzava drzava) {
+
+		System.out.printf("Unesite naziv zupanije %d. mjerne postaje: ", redniBroj + 1);
+		String nazivZupanije = skener.nextLine();
+
+		return new Zupanija(nazivZupanije, drzava);
+	}
+
+	private static Mjesto unesiMjesto(Scanner skener, Integer redniBroj, Zupanija zupanija) {
+
+		System.out.printf("Unesite naziv mjesta %d. mjerne postaje: ", redniBroj + 1);
+		String nazivMjesta = skener.nextLine();
+
+		return new Mjesto(nazivMjesta, zupanija);
+	}
+
+	private static GeografskaTocka unesiGeografskuTocku(Scanner skener, Integer redniBroj) {
+
+		System.out.printf("Unesite x koordinatu geografske tocke %d. mjerne postaje: ", redniBroj + 1);
+		BigDecimal x = skener.nextBigDecimal();
+
+		System.out.printf("Unesite y koordinatu geografske tocke %d. mjerne postaje: ", redniBroj + 1);
+		BigDecimal y = skener.nextBigDecimal();
+
+		skener.nextLine();
+
+		return new GeografskaTocka(x, y);
+	}
+
+	private static Operater unesiOperatera(Scanner skener, Integer redniBroj) {
+
+		System.out.printf("Unesite OIB operatera %d. mjerne postaje: ", redniBroj + 1);
+		String oib = skener.nextLine();
+		while (OIBProvjera.checkOIB(oib) == false) {
+			System.out.printf("Unesite OIB operatera %d. mjerne postaje: ", redniBroj + 1);
+			oib = skener.nextLine();
+		}
+		;
+
+		System.out.printf("Unesite ime operatera %d. mjerne postaje: ", redniBroj + 1);
+		String ime = skener.nextLine();
+
+		System.out.printf("Unesite prezime operatera %d. mjerne postaje: ", redniBroj + 1);
+		String prezime = skener.nextLine();
+
+		return new Operater(oib, ime, prezime);
+	}
+
+	private static void provjeraOperatera(Operater[] operateri) {
+
+		for (int i = 0; i < operateri.length; i++) {
+			for (int j = 0; j < operateri.length; j++) {
+				if (operateri[i] == null || operateri[i].getOIB() == null) {
+					continue;
+				} else if (operateri[i].getOIB() == "71307275772") {
+					System.out.println("Njet");
+				}
+			}
+		}
+
+	}
+}
