@@ -1,0 +1,48 @@
+1
+Mjerna postaja Zagreb
+Zagreb
+NULL
+NULL
+NULL
+2
+Mjerna postaja Ljubljana
+Ljubljana
+NULL
+NULL
+NULL
+3
+Mjerna postaja Skopje
+Skopje
+NULL
+NULL
+150
+4
+Mjerna postaja Sarajevo
+Skopje
+NULL
+NULL
+150
+5
+Mjerna postaja Berlin
+Berlin
+NULL
+NULL
+NULL
+6
+Mjerna postaja Trnava
+Trnava
+NULL
+NULL
+NULL
+7
+Mjerna postaja Pečuh
+Pečuh
+NULL
+NULL
+250
+7
+Mjerna postaja Berat
+Berat
+NULL
+NULL
+NULL

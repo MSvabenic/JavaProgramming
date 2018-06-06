@@ -1,0 +1,44 @@
+1
+Banova graba
+Zagrebacka
+GRAD
+2
+Babina slovenija
+Slovensko lesce
+SELO
+3
+Makedonska dolina
+Makedonska ravnica
+OSTALO
+4
+Sarajevo
+Prigradski
+GRAD
+5
+Berlin
+Nordsee
+GRAD
+6
+Trnava
+Morava
+GRAD
+7
+Pečuh
+Bituh
+SELO
+8
+Berat
+Priština
+SELO
+9
+Marko
+Zagrebacka
+SELO
+10
+Sesvete
+Zagrebacka
+GRAD
+11
+Kola
+Zagrebacka
+GRAD

@@ -1,0 +1,12 @@
+1
+Banova graba
+Zagrebacka
+GRAD
+2
+Babina slovenija
+Slovenija
+SELO
+3
+Makedonsko celje
+Makedonija
+OSTALO

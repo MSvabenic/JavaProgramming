@@ -1,0 +1,24 @@
+1
+Zagrebacka
+Hrvatska
+2
+Slovensko lesce
+Slovenija
+3
+Makedonska ravnica
+Makedonija
+4
+Sarajevo
+Bosna i Hercegovina
+5
+Berlin
+Njemačka
+6
+Trnava
+Slovačka
+7
+Pečuh
+Mađarska
+8
+Berat
+Albanija

@@ -1,0 +1,32 @@
+1
+Banova graba
+Zagrebacka
+GRAD
+2
+Babina slovenija
+Slovenija
+SELO
+3
+Makedonsko celje
+Makedonija
+OSTALO
+4
+Sarajevo
+Bosna i Hercegovina
+GRAD
+5
+Berlin
+Njemačka
+GRAD
+6
+Trnava
+Slovačka
+GRAD
+7
+Pečuh
+Mađarska
+SELO
+8
+Berat
+Albanija
+SELO

@@ -1,0 +1,70 @@
+1
+Mjerna postaja Zagreb
+Banova graba
+45.45
+52.52
+NULL
+NULL
+2
+Mjerna postaja Ljubljana
+Babina slovenija
+50.50
+65.65
+NULL
+NULL
+3
+Mjerna postaja Skopje
+Makedonska dolina
+15.45
+50.00
+NULL
+150
+4
+Mjerna postaja Sarajevo
+Sarajevo
+25.20
+50.15
+NULL
+150
+5
+Mjerna postaja Berlin
+Berlin
+50.50
+65.65
+NULL
+NULL
+6
+Mjerna postaja Trnava
+Trnava
+25.15
+58.15
+NULL
+NULL
+7
+Mjerna postaja Pečuh
+Pečuh
+88.15
+15.00
+NULL
+250
+7
+Mjerna postaja Berat
+Berat
+15.45
+50.00
+NULL
+NULL
+11
+Marko postaja
+Banova graba
+15.50
+25.58
+NULL
+NULL
+9
+11
+Banova graba
+11
+11
+NULL
+NULL

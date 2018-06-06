@@ -1,0 +1,27 @@
+1
+Zagrebacka
+Hrvatska
+2
+Slovensko lesce
+Slovenija
+3
+Makedonska ravnica
+Makedonija
+4
+Prigradski
+Bosna i Hercegovina
+5
+Nordsee
+Njemačka
+6
+Morava
+Slovačka
+7
+Bituh
+Mađarska
+8
+Priština
+Albanija
+11
+Sinjska
+Hrvatska

@@ -1,0 +1,33 @@
+1
+Hrvatska
+245421
+2
+Slovenija
+4545
+3
+Makedonija
+55454
+4
+Bosna i Hercegovina
+456446
+5
+Njemačka
+654646
+6
+Slovačka
+54564
+7
+Mađarska
+65698
+8
+Albanija
+31313
+11
+Finska
+500000
+10
+¸123
+123123
+11
+Velika Britanija
+150000
